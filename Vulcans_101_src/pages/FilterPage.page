@@ -1,0 +1,14 @@
+<apex:page controller="FilterController">
+    <apex:form >
+        <apex:outputLabel value="Month : "></apex:outputLabel>
+        <apex:selectList value="{!selectedMonth}" size="1">
+            <apex:selectOptions value="{!displayMonths}"/>
+        </apex:selectList>
+        
+        <apex:outputLabel value="Year : "></apex:outputLabel>        
+        <apex:selectList value="{!selectedYear}" size="1">
+            <apex:selectOptions value="{!displayYears}"/>
+        </apex:selectList>
+        <!-- Add Run button and Other Page Elements here  -->
+    </apex:form>
+</apex:page>

@@ -1,0 +1,29 @@
+<apex:page controller="FilterController">
+    <apex:form >
+      <!--  apex:pageBlock  >  -->
+         <apex:panelGrid columns="3">
+            <apex:outputText >
+                <apex:outputLabel value="Month : "></apex:outputLabel>
+                    <apex:selectList value="{!selectedMonth}" size="1">
+                        <apex:selectOptions value="{!displayMonths}"/>
+                    </apex:selectList>
+            </apex:outputText>
+            &nbsp;
+            <apex:outputText >
+                <apex:outputLabel value="Year : "></apex:outputLabel>        
+                    <apex:selectList value="{!selectedYear}" size="1">
+                        <apex:selectOptions value="{!displayYears}"/>
+                    </apex:selectList>
+            </apex:outputText>
+            
+            
+            <!-- Add Run button and Other Page Elements here  -->
+            <apex:pageBlock > 
+                 <apex:pageBlockButtons location="Top" >
+                        <apex:commandButton value="Run Report" />
+                 </apex:pageBlockButtons>
+            </apex:pageBlock>        
+         </apex:panelGrid>
+       <!-- /apex:pageBlock>  -->
+    </apex:form>
+</apex:page>
